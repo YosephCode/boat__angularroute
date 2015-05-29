@@ -1,0 +1,44 @@
+<link rel="import" href="..\..\bower_components/polymer/polymer.html">
+
+<polymer-element name="dropdown-hover">
+  <template>
+    <link rel="stylesheet" href="dropdown-hover.css">
+    <ul class="ul__menu--main">
+      <template repeat="{{op in menu}}">
+        <div class="div__dropdown"> 
+          <li class="li__option--menu-main">
+            <div class="div__arrow">
+              <span class="arrow arrow--top"></span>
+            </div>
+            <div class="div__option">
+              <a href="{{op.link}}" class="a__option--menu-main">{{op.name}}</a>
+            </div>
+          </li>
+          <ul class="ul__dropdown--options">
+            <template repeat="{{sub in subMenu}}">
+              <li><a href="{{sub.link}}">{{sub.name}}</a></li>
+            </template>
+          </ul>
+        </div>
+      </template>
+    </ul>
+  </template>
+  <script>
+    Polymer('dropdown-hover', {
+      ready: function(){
+        this.menu = [
+            {name: 'About Us', link: '/#/about'},
+            {name: 'Project Profile', link: '/#/'},
+            {name: 'Immigration Services', link: '/#/'}
+        ];
+        this.subMenu = [
+            {name: 'Human Resources', link: '/#/about'},
+            {name: 'Business Cooperation', link: '/#/'},
+            {name: 'Immigration Services', link: '/#/'},
+            {name: 'Contact Us', link: '/#/'},
+            {name: 'News', link: '/#/about'}
+        ];
+      }
+    });
+  </script>
+</polymer-element>

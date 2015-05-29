@@ -1,0 +1,119 @@
+:host {
+  display: block;
+}
+.ul__menu--main { 
+    padding: 0;
+    margin-top: 40%;
+
+  .div__dropdown { 
+    display: inline-block;
+    position: relative;
+    .ul__dropdown--options{
+      display: none;
+    }
+  }
+  .div__dropdown:hover{
+    .ul__dropdown--options{
+      display: block;
+      position: absolute;
+      top: -190px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 0;
+      width: 100%;
+      list-style: none;
+      text-align: center;
+      li{
+        padding: 10px;
+        cursor: pointer;
+        a{
+          font-size: 14px;
+          color:white;
+          padding:10px;
+          text-decoration: none;
+        }
+      }
+      li:hover{
+        background-color: rgba(0,0,0,0.8);
+      }
+    }
+  }
+  .li__option--menu-main {
+      display: inline-block;
+      .div__arrow--up{
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid black;
+      }
+      .div__arrow{
+        text-align: center;
+        background: rgba(0,0,0,0.3);
+        vertical-align: middle;
+
+        .arrow { 
+          border-style: solid;
+          border-width: 0.25em 0.25em 0 0;
+          content: '';
+          display: inline-block;
+          height: 0.45em;
+          left: 0.15em;
+          position: relative;
+          top: 0.30em;
+          transform: rotate(-45deg);
+          vertical-align: top;
+          width: 0.45em;
+        }
+        .arrow--top {
+          transform: rotate(-45deg);
+        }
+      }
+      .div__option{
+          padding: 1px 80px 0px;
+          background: rgba(254, 254, 252, 0.8);
+          cursor: pointer;
+          .a__option--menu-main {
+              text-decoration: none;
+              color: #464646;
+              font-size: 22px;
+              line-height: 2.5;
+          }
+      }
+  } 
+  .li__option--menu-main:hover{
+    background: rgba(241, 228, 219, 1);
+  }
+}
+
+@media (max-width: 1480px){
+    .ul__menu--main { 
+        .li__option--menu-main {
+            .div__option{
+                padding: 1px 50px 0px;
+            }
+        }
+
+    }
+}
+@media (max-width: 1200px){
+    .ul__menu--main { 
+        .div__dropdown:hover{
+          .ul__dropdown--options{
+            li{
+              a{
+                padding:0px;
+              }
+            }
+            li:hover{
+              background-color: rgba(0,0,0,0.8);
+            }
+          }
+        }
+        .li__option--menu-main {
+            .div__option{
+                padding: 1px 35px 0px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,53 @@
+<template is="auto-binding" id="about">
+	<section fullbleed layout vertical class="section__background--about" ng-controller="aboutController">
+		<article class="article__background--about">
+			<header class="header__about">
+				<div class="div__header--logo">
+					<a href="/#/"><img class="img__logo" src="../images/logo.png"></a>
+				</div>
+				<a href="/#/"><div class="div__header--banner"></div></a>
+			</header>
+			<article class="article__content--main">
+				<div class="div__side--menu">
+					<ul class="ul__side--menu">
+						<core-menu selected="{{page}}" valueattr="data-category">
+							<core-item data-category="about">
+								<li class="li__side--menu">
+									<div class="div__side--menu-bar"></div>
+									<span class="span__side--menu">
+										About us
+									</span>
+								</li>
+							</core-item>
+							<core-item data-category="business">
+								<li class="li__side--menu">
+									<div class="div__side--menu-bar"></div>
+									<span class="span__side--menu">
+										Business
+									</span>	
+								</li>
+							<core-item>
+						</core-menu>
+					</ul>
+				</div>
+				<div class="div__content--about">
+					<core-pages selected="{{page}}" valueattr="data-category">
+						<section data-category="about">
+								<div class="div__content--title">賦予頭銜</div><hr />
+								<div class="div__content--text">
+									<p>加勒比盖勒斯房地产开发有限公司(Caribbean Galaxy Real Estate 加勒比盖勒斯房地产开发有限公司(Caribbean Galaxy Real Estate Corporation，以下简称“GCorporation，以下简称“G加勒比盖勒斯房地产开发有限公司(Caribbean Galaxy Real Estate Corporation，以下简称“G
+									加勒比盖勒斯房地产开发有限公司(Caribbean Galaxy Real Estate Corporation，以下简称“G</p>
+								</div>
+						</section>
+						<section data-category="business">
+								<div class="div__content--title">賦予頭銜頭銜 頭銜</div><hr />
+								<div class="div__content--text">
+									<p>加勒比盖勒斯房地产开发有限公司(Caribbean Galaxy Real Estate Corporation，以下简称“G</p>
+								</div>
+						</section>
+					</core-pages>
+				</div>		
+			</article>
+		</article>			
+	</section>
+</template>
